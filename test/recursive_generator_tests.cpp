@@ -278,7 +278,7 @@ TEST_CASE("exceptions thrown from nested call can be caught by caller")
 			try
 			{
 				auto next_generator = f(3, f);
-				co_yield next_generator
+				co_yield next_generator;
 			}
 			catch (SomeException)
 			{
