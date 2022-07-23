@@ -3,6 +3,8 @@ target_include_directories(doctest::doctest INTERFACE doctest)
 
 include(${CMAKE_CURRENT_LIST_DIR}/doctest/doctest.cmake)
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fcoroutines -std=c++20 -lpthread")
+
 find_package(Threads REQUIRED)
 
 add_library(tests-main STATIC
